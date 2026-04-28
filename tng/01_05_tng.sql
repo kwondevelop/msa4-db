@@ -1,22 +1,25 @@
 -- 1. 직급 테이블의 모든 정보를 조회해주세요.
 
 SELECT *
-FROM titles;
+FROM titles
+;
 
 -- 2. 급여가 60,000,000 이하인 사원의 사번을 조회
 
 SELECT emp_id
 FROM salaries
 WHERE
-	salary <= 60000000;
-
+	end_at IS NULL -- 없었다가 추가함
+	AND salary <= 60000000
+;
 
 -- 3. 급여가 60,000,000에서 70,000,000인 사원의 사번을 조회
 
 SELECT emp_id
 FROM salaries
 WHERE
-salary BETWEEN 60000000 AND 70000000
+	end_at IS NULL -- 없었다가 추가함
+	AND salary BETWEEN 60000000 AND 70000000
 ;
 
 -- 4. 사원번호가 10001, 10005인 사원의
